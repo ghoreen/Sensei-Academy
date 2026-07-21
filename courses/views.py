@@ -3,10 +3,10 @@ from django.shortcuts import render
 
 def home(request):
     courses_list = [
-        'أساسيات Python',
-        'تطوير الويب باستخدام Django',
-        'قواعد البيانات SQLite & PostgreSQL',
-        'بناء الـ APIs بـ Django REST Framework',
+        'أساسيات الرسم',
+         'تطوير مهاراتك في الرسم',
+         'شروحات وامثله ',
+        'اساتذه مختصين في مجال رسم الانمي اضافه الى ارشادات مهمه',
     ]
 
     context = {
