@@ -1,0 +1,82 @@
+/* style.css - تصميم اكاديمية سينسي الانمي */
+
+/* تأثير حركي للخلفية المتدرجة */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* خلفية متدرجة بألوان انمي مفعمة بالحيوية */
+    background: linear-gradient(-45deg, #FF6B6B, #4ECDC4, #FFD93D, #FF6B6B);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #333;
+    direction: rtl; /* اتجاه النص من اليمين لليسار */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+nav a {
+    color: #4ECDC4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    transition: color 0.3s ease; /* تأثير انتقالي ناعم */
+}
+
+nav a:hover {
+    color: #FF6B6B; /* اللون عند تمرير الماوس */
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px; /* زوايا منحنية */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #FF6B6B;
+    text-align: center;
+    font-size: 3rem;
+}
+
+h3 {
+    border-bottom: 2px solid #FFD93D;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+ul {
+    list-style-type: none; /* إزالة النقاط من القائمة */
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    border-right: 5px solid #4ECDC4; /* شريط جانبي ملون */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* تأثير حركي للقائمة عند تمرير الماوس */
+li:hover {
+    transform: translateX(-10px); /* تتحرك لليسار */
+    border-right-color: #FF6B6B; /* يتغير لون الشريط */
+}

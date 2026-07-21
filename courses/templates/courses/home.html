@@ -1,0 +1,16 @@
+{% extends 'courses/base.html' %}
+
+{% block title %}الصفحة الرئيسية{% endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    
+    <h3>الكورسات المتاحة:</h3>
+    <ul>
+        {% for course in courses %}
+            <li>{{ course }}</li>
+        {% empty %}
+            <li>لا توجد كورسات متاحة حالياً.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

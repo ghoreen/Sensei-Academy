@@ -1,4 +1,20 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+
 
 def home(request):
-    return HttpResponse("<h1>Welcome to Sensei Academy 🎓</h1><p>Learn to draw anime.</p>")
+    courses_list = [
+        'أساسيات Python',
+        'تطوير الويب باستخدام Django',
+        'قواعد البيانات SQLite & PostgreSQL',
+        'بناء الـ APIs بـ Django REST Framework',
+    ]
+
+    context = {
+        'title': 'أهلاً بك في أكاديمية سينسي!',
+        'courses': courses_list,
+    }
+    return render(request, 'courses/home.html', context)
+
+
+def about(request):
+    return render(request, 'courses/about.html')
